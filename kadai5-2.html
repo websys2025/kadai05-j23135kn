@@ -6,7 +6,7 @@
 <body>
     <h1 id="msg">News API</h1>
     <form name="apiform"><p>
-        何かのフォーム：<input type="text" name="form_data">
+        検索ワードを入力：<input type="text" name="form_data">
         <button type="button" id="btn1" onclick="some_api(this.form)">実行</button>
     </p></form>
     <div id="result"></div>
@@ -17,7 +17,6 @@
             const form_data = myForm.form_data.value;
             const endpoint =    'https://newsapi.org/v2/everything?' +
                                 `q=${form_data}&` +
-                                //from=2025-06-02&' +
                                 'sortBy=popularity&' +
                                 'apiKey=c337b12af379461f8e20a5bbe8eb736b';
             const response = await fetch(endpoint);
